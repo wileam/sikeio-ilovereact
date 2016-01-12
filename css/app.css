@@ -71,6 +71,9 @@ section {
   /*border: 2px solid #FFF;*/
   width: 100vw;
   height: 100vh;
+  /*flex-grow: 1;*/
+  /*align-self: stretch;*/
+
   align-items: center;
   justify-content: center;
 }
@@ -79,4 +82,35 @@ section h1 {
   display: flex;
   margin-top: 50px;
   margin-bottom: 40px;
+}
+
+.iphone-demo, .feature-description {
+  align-self: stretch;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.iphone-demo {
+  /*background-color: rgba(255,0,0,0.3);*/
+  align-items: center;
+  justify-content: center;
+}
+
+.iphone-demo .screenshot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -226px;
+  margin-left: -128.5px;
+}
+
+.feature-description {
+  /*background-color: rgba(0,255,0,0.3);*/
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.feature-description p, .feature-description h2 {
+  margin-left: 114px;
+  margin-right: 50px;
 }
