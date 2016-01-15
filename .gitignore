@@ -1,7 +1,3 @@
-# external js files
-!node_modules/gsap/src/uncompressed/TweenMax.js
-!node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js
-
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
