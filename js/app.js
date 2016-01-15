@@ -1,3 +1,5 @@
+'use strict';
+
 function animateLogo() {
   TweenMax.fromTo('#J_reactLogo',2, {
       // from
@@ -68,6 +70,9 @@ function addSmoothScrolling() {
   for (var i = links.length - 1; i >= 0; i--) {
     var link = links[i];
 
+    // use let to fix the bug:
+    // let link = links[i];
+
     // use closure to fix this bug:
     // (function (link) {
     //   link.addEventListener('click', function(){
@@ -81,12 +86,9 @@ function addSmoothScrolling() {
 
       console.log('link: '+link);
       console.log('this: '+this);
-
-      // BUG WARNING! Fix with a closure or ES6 `let`.
       // http://stackoverflow.com/questions/8909652/adding-click-event-listeners-in-loop
+      // BUG WARNING! Fix with a closure or ES6 `let`.
       var href = this.getAttribute('href');
-
-      // TODO: use ES6 `let` to fix this
 
       scrollToElement(document.querySelector(href));
     });
